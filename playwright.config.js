@@ -39,6 +39,7 @@ export default defineConfig({
     screenshot: 'off',
     video: "off",
     
+    
     httpCredentials:{
       username:'te3ter',
       password:'22JJ33kk'
