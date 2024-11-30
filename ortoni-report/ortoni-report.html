@@ -344,7 +344,7 @@ button#back-to-summary {
                                         status-passed
                                         " data-suite-name="Login form test cases"
                                         data-test-tags="" data-project-name="chromium" data-test-id="0"
-                                        data-test-history-id="loginTest.spec.js:chromium:Test 1" data-test-status="passed " data-test-duration="06s:183ms">
+                                        data-test-history-id="loginTest.spec.js:chromium:Test 1" data-test-status="passed " data-test-duration="22s:711ms">
                                         <div class="icon-text">
                                             <span>Test 1</span>
                                         </div>
@@ -353,7 +353,7 @@ button#back-to-summary {
                                         status-passed
                                         " data-suite-name="Login form test cases"
                                         data-test-tags="" data-project-name="chromium" data-test-id="1"
-                                        data-test-history-id="loginTest.spec.js:chromium:Test 2" data-test-status="passed " data-test-duration="03s:010ms">
+                                        data-test-history-id="loginTest.spec.js:chromium:Test 2" data-test-status="passed " data-test-duration="28s:261ms">
                                         <div class="icon-text">
                                             <span>Test 2</span>
                                         </div>
@@ -362,17 +362,29 @@ button#back-to-summary {
                                         status-passed
                                         " data-suite-name="Login form test cases"
                                         data-test-tags="" data-project-name="chromium" data-test-id="2"
-                                        data-test-history-id="loginTest.spec.js:chromium:Test 3" data-test-status="passed " data-test-duration="02s:506ms">
+                                        data-test-history-id="loginTest.spec.js:chromium:Test 3" data-test-status="passed " data-test-duration="29s:897ms">
                                         <div class="icon-text">
                                             <span>Test 3</span>
                                         </div>
                                         <span class="tag duration-tag has-text-weight-medium">chromium</span>
                                     </div>                <div class="test-item 
-                                        status-passed
+                                        status-failed
                                         " data-suite-name="Login form test cases"
                                         data-test-tags="" data-project-name="chromium" data-test-id="3"
-                                        data-test-history-id="loginTest.spec.js:chromium:Test 4" data-test-status="passed " data-test-duration="02s:033ms">
+                                        data-test-history-id="loginTest.spec.js:chromium:Test 4" data-test-status="timedOut " data-test-duration="30s:022ms">
                                         <div class="icon-text">
+                                            <span>Test 4</span>
+                                        </div>
+                                        <span class="tag duration-tag has-text-weight-medium">chromium</span>
+                                    </div>                <div class="test-item 
+                                        status-flaky
+                                        " data-suite-name="Login form test cases"
+                                        data-test-tags="" data-project-name="chromium" data-test-id="4"
+                                        data-test-history-id="loginTest.spec.js:chromium:Test 4" data-test-status="flaky retry" data-test-duration="06s:169ms">
+                                        <div class="icon-text">
+                                            <span class="icon has-text-info">
+                                                <i class="fa-solid fa-rotate-right" style="color: #fff;"></i>
+                                            </span>
                                             <span>Test 4</span>
                                         </div>
                                         <span class="tag duration-tag has-text-weight-medium">chromium</span>
@@ -392,7 +404,25 @@ button#back-to-summary {
                             <div class="column is-one-sixth">
                                 <div class="box has-background-success filter" data-status="passed">
                                     <p class="has-text-white is-size-6">Passed</p>
-                                    <p class="has-text-white is-size-4">4</p>
+                                    <p class="has-text-white is-size-4">3</p>
+                                </div>
+                            </div>
+                            <div class="column is-one-sixth">
+                                <div class="box has-background-danger filter" data-status="failed">
+                                    <p class="has-text-white is-size-6">Failed</p>
+                                    <p class="has-text-white is-size-4">1</p>
+                                </div>
+                            </div>
+                            <div class="column is-one-sixth">
+                                <div class="box has-background-warning filter" data-status="flaky">
+                                    <p class="has-text-white is-size-6">Flaky</p>
+                                    <p class="has-text-white is-size-4">1</p>
+                                </div>
+                            </div>
+                            <div class="column is-one-sixth">
+                                <div class="box has-background-retry filter" data-status="retry">
+                                    <p class="has-text-white is-size-6">Retry</p>
+                                    <p class="has-text-white is-size-4">1</p>
                                 </div>
                             </div>
                         </div>
@@ -416,7 +446,7 @@ button#back-to-summary {
                                             <span class="icon has-text-info mr-2">
                                                 <i class="fas fa-calendar-alt"></i>
                                             </span>
-                                            <span class="is-size-5">24-Nov-2024 4:01:49 PM</span>
+                                            <span class="is-size-5">30-Nov-2024 8:51:48 PM</span>
                                         </p>
                                     </div>
                                     <div class="field">
@@ -425,7 +455,7 @@ button#back-to-summary {
                                             <span class="icon has-text-warning mr-2">
                                                 <i class="fas fa-stopwatch"></i>
                                             </span>
-                                            <span class="is-size-5">14s:767ms</span>
+                                            <span class="is-size-5">39s:319ms</span>
                                         </p>
                                     </div>
                                 </div>
@@ -476,7 +506,7 @@ button#back-to-summary {
                                         data: {
                                             labels: ['Passed', 'Failed', 'Skipped', 'Flaky'],
                                             datasets: [{
-                                                data: [4, 0, 0, 0],
+                                                data: [3, 1, 0, 1],
                                         backgroundColor: ['#28a745', '#ff6685', '#66d1ff', '#ffb70f']}]
                                         },
                                         options: {
@@ -550,16 +580,16 @@ button#back-to-summary {
                                         }
                                     });
                                     const passedTests = [
-                              4
+                              3
                             ];
                                     const failedTests = [
-                              0
+                              1
                             ];
                                     const skippedTests = [
                               0
                             ];
                                     const retryTests = [
-                              0
+                              1
                             ];
                                     new Chart(projectbarChart, {
                                         type: 'bar',
@@ -624,7 +654,7 @@ button#back-to-summary {
     "title": "Test 1",
     "status": "passed",
     "flaky": "expected",
-    "duration": "06s:183ms",
+    "duration": "22s:711ms",
     "errors": [],
     "steps": [
       {
@@ -660,7 +690,7 @@ button#back-to-summary {
     "title": "Test 2",
     "status": "passed",
     "flaky": "expected",
-    "duration": "03s:010ms",
+    "duration": "28s:261ms",
     "errors": [],
     "steps": [
       {
@@ -695,7 +725,7 @@ button#back-to-summary {
     "title": "Test 3",
     "status": "passed",
     "flaky": "expected",
-    "duration": "02s:506ms",
+    "duration": "29s:897ms",
     "errors": [],
     "steps": [
       {
@@ -728,9 +758,52 @@ button#back-to-summary {
     "projectName": "chromium",
     "suite": "Login form test cases",
     "title": "Test 4",
-    "status": "passed",
-    "flaky": "expected",
-    "duration": "02s:033ms",
+    "status": "timedOut",
+    "flaky": "unexpected",
+    "duration": "30s:022ms",
+    "errors": [
+      "<span style=\"color:#A00\">Test timeout of 30000ms exceeded.<span style=\"color:var(--snippet-color)\"></span></span>",
+      "Error: page.goto: Target page, context or browser has been closed\nCall log:\n  - navigating to &quot;https://staging.analystbuilder.com/&quot;, waiting until &quot;load&quot;<span style=\"font-weight:normal;text-decoration:none;font-style:normal\">\n\n    at CommonAction.navigate (C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\utils\\commonactions.js:10:25)\n    at LoginPage.loginPage (C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\pages\\loginpage.js:14:28)\n    at C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\tests\\loginTest.spec.js:31:25</span>"
+    ],
+    "steps": [
+      {
+        "snippet": "",
+        "title": "Before Hooks",
+        "location": ""
+      },
+      {
+        "snippet": "<span style=\"color:#555\">   at <span style=\"color:var(--snippet-color)\">..\\utils\\commonactions.js:10\n\n</span></span> <span style=\"color:#555\">  8 |<span style=\"color:var(--snippet-color)\">     <span style=\"color:#0AA\">async<span style=\"color:var(--snippet-color)\"> navigate(url){\n <span style=\"color:#555\">  9 |<span style=\"color:var(--snippet-color)\">         <span style=\"color:#555\">// await this.page.pause()<span style=\"color:var(--snippet-color)\">\n<span style=\"color:#A00\"><b>><span style=\"font-weight:normal;text-decoration:none;font-style:normal\"><span style=\"color:var(--snippet-color)\"><span style=\"color:#555\"> 10 |<span style=\"color:var(--snippet-color)\">         <span style=\"color:#0AA\">await<span style=\"color:var(--snippet-color)\"> <span style=\"color:#0AA\">this<span style=\"color:var(--snippet-color)\"><span style=\"color:#A50\">.<span style=\"color:var(--snippet-color)\">page<span style=\"color:#A50\">.<span style=\"color:var(--snippet-color)\">goto(url)\n <span style=\"color:#555\">    |<span style=\"color:var(--snippet-color)\">                         <span style=\"color:#A00\"><b>^<span style=\"font-weight:normal;text-decoration:none;font-style:normal\"><span style=\"color:var(--snippet-color)\">\n <span style=\"color:#555\"> 11 |<span style=\"color:var(--snippet-color)\">     }\n <span style=\"color:#555\"> 12 |<span style=\"color:var(--snippet-color)\">\n <span style=\"color:#555\"> 13 |<span style=\"color:var(--snippet-color)\">     <span style=\"color:#0AA\">async<span style=\"color:var(--snippet-color)\"> click(selector){</span></span></span></span></span></span></span></span></span></span></b></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></b></span></span></span></span></span></span></span></span></span>",
+        "title": "page.goto(https://staging.analystbuilder.com)",
+        "location": "..\\utils\\commonactions.js:10:25"
+      },
+      {
+        "snippet": "",
+        "title": "After Hooks",
+        "location": ""
+      },
+      {
+        "snippet": "",
+        "title": "Worker Cleanup",
+        "location": ""
+      }
+    ],
+    "logs": "",
+    "filePath": "loginTest.spec.js",
+    "screenshots": []
+  },
+  {
+    "port": 2004,
+    "annotations": [],
+    "testTags": [],
+    "location": "loginTest.spec.js:30:9",
+    "retry": "retry",
+    "isRetry": 1,
+    "projectName": "chromium",
+    "suite": "Login form test cases",
+    "title": "Test 4",
+    "status": "flaky",
+    "flaky": "flaky",
+    "duration": "06s:169ms",
     "errors": [],
     "steps": [
       {
@@ -747,17 +820,41 @@ button#back-to-summary {
         "snippet": "",
         "title": "After Hooks",
         "location": ""
+      },
+      {
+        "snippet": "",
+        "title": "attach \"trace\"",
+        "location": ""
       }
     ],
     "logs": "",
     "filePath": "loginTest.spec.js",
-    "screenshots": []
+    "screenshots": [],
+    "tracePath": "ortoni-data\\attachments\\34079698e3a4e33a459d-796ef01c42dd783b4bf3\\trace.zip"
   }
 ];
             const testHistory = [
   {
     "testId": "loginTest.spec.js:chromium:Test 1",
     "history": [
+      {
+        "status": "passed",
+        "duration": "22s:711ms",
+        "error_message": "",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "04s:642ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:27 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "05s:371ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:26 PM GMT+5:30"
+      },
       {
         "status": "passed",
         "duration": "06s:183ms",
@@ -783,6 +880,24 @@ button#back-to-summary {
     "history": [
       {
         "status": "passed",
+        "duration": "28s:261ms",
+        "error_message": "",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "05s:558ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:27 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "02s:242ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:26 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
         "duration": "03s:010ms",
         "error_message": "",
         "run_date": "Nov 24, 2024, 04:01 PM GMT+5:30"
@@ -806,6 +921,24 @@ button#back-to-summary {
     "history": [
       {
         "status": "passed",
+        "duration": "29s:897ms",
+        "error_message": "",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "06s:800ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:27 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "04s:077ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:26 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
         "duration": "02s:506ms",
         "error_message": "",
         "run_date": "Nov 24, 2024, 04:01 PM GMT+5:30"
@@ -827,6 +960,77 @@ button#back-to-summary {
   {
     "testId": "loginTest.spec.js:chromium:Test 4",
     "history": [
+      {
+        "status": "timedOut",
+        "duration": "30s:022ms",
+        "error_message": "<span style=\"color:#A00\">Test timeout of 30000ms exceeded.<span style=\"color:var(--snippet-color)\"></span></span>\nError: page.goto: Target page, context or browser has been closed\nCall log:\n  - navigating to &quot;https://staging.analystbuilder.com/&quot;, waiting until &quot;load&quot;<span style=\"font-weight:normal;text-decoration:none;font-style:normal\">\n\n    at CommonAction.navigate (C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\utils\\commonactions.js:10:25)\n    at LoginPage.loginPage (C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\pages\\loginpage.js:14:28)\n    at C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\tests\\loginTest.spec.js:31:25</span>",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "flaky",
+        "duration": "06s:169ms",
+        "error_message": "",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "05s:753ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:27 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "03s:549ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:26 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "02s:033ms",
+        "error_message": "",
+        "run_date": "Nov 24, 2024, 04:01 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "03s:118ms",
+        "error_message": "",
+        "run_date": "Nov 24, 2024, 01:36 AM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "01s:814ms",
+        "error_message": "",
+        "run_date": "Nov 24, 2024, 01:35 AM GMT+5:30"
+      }
+    ]
+  },
+  {
+    "testId": "loginTest.spec.js:chromium:Test 4",
+    "history": [
+      {
+        "status": "timedOut",
+        "duration": "30s:022ms",
+        "error_message": "<span style=\"color:#A00\">Test timeout of 30000ms exceeded.<span style=\"color:var(--snippet-color)\"></span></span>\nError: page.goto: Target page, context or browser has been closed\nCall log:\n  - navigating to &quot;https://staging.analystbuilder.com/&quot;, waiting until &quot;load&quot;<span style=\"font-weight:normal;text-decoration:none;font-style:normal\">\n\n    at CommonAction.navigate (C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\utils\\commonactions.js:10:25)\n    at LoginPage.loginPage (C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\pages\\loginpage.js:14:28)\n    at C:\\Users\\rames\\Desktop\\WorkSpace\\ABDemo\\tests\\loginTest.spec.js:31:25</span>",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "flaky",
+        "duration": "06s:169ms",
+        "error_message": "",
+        "run_date": "Nov 30, 2024, 08:51 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "05s:753ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:27 PM GMT+5:30"
+      },
+      {
+        "status": "passed",
+        "duration": "03s:549ms",
+        "error_message": "",
+        "run_date": "Nov 28, 2024, 06:26 PM GMT+5:30"
+      },
       {
         "status": "passed",
         "duration": "02s:033ms",

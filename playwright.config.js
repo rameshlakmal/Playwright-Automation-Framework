@@ -8,7 +8,6 @@ import { defineConfig, devices } from '@playwright/test';
 // require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 
-const isCI = process.env.CI === 'true';
 
 
 /**
@@ -27,14 +26,20 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
   
-  reporter: [["ortoni-report",
-  {
-    projectName: "AB Demo Test Project",
-    authorName: "Ramesh",
-    testType: '',
-    server: !isCI,
-  }], 
-  ["dot"]],
+  reporter: [
+  //   ["ortoni-report",
+  // {
+  //   projectName: "AB Demo Test Project",
+  //   authorName: "Ramesh",
+  //   testType: '',
+  // }], 
+  ["list"],
+  ["dot"],
+  ["allure-playwright"],
+  ["json", {outputFile: 'reporter.json'}]
+],
+
+  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -44,7 +49,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: true,
     screenshot: 'off',
-    video: "off",
+    video: 'off',
     
     httpCredentials:{
       username:'te3ter',

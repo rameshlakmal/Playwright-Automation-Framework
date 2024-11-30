@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","16505","Test 2","chromium","Sat Nov 30 20:52:23 IST 2024","passed","Sat Nov 30 20:52:39 IST 2024","Login form test cases","loginTest.spec.js","",""
+"","10656","Test 1","chromium","Sat Nov 30 20:52:12 IST 2024","passed","Sat Nov 30 20:52:23 IST 2024","Login form test cases","loginTest.spec.js","",""
+"","6352","Test 3","chromium","Sat Nov 30 20:52:39 IST 2024","passed","Sat Nov 30 20:52:46 IST 2024","Login form test cases","loginTest.spec.js","",""
+"","13000","Test 4","chromium","Sat Nov 30 20:52:46 IST 2024","passed","Sat Nov 30 20:52:59 IST 2024","Login form test cases","loginTest.spec.js","",""
