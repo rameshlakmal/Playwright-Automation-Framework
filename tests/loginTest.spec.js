@@ -1,3 +1,4 @@
+import { assert } from "console";
 import {test,expect} from "../fixtures/fixtures.js"
 
 const loginData = [
@@ -9,6 +10,11 @@ const loginData = [
     {
         email: "lakmali@mailinator.com",
         password: "123456"
+    },
+
+    {
+        email: "",
+        password: ""
     },
 ]
 
@@ -23,8 +29,9 @@ test.describe('Login form test cases' , () => {
 
 
     loginData.forEach((data,index) => {
-        test(`Login Test ${index + 1} - Login with email: ${data.email}`, async ({loginPage,page}) => {
-            await loginPage.loginPage();
+        test(`Login Test ${index + 1} - Login with email: ${data.email}`, async ({loginPage}) => {
+            await loginPage.Enter_Credentials_and_Click_Login_BTn(data.email,data.password);
+            await loginPage.assertErrorMessage("//span[normalize-space()='Email is required!']", "Password is req")
         });
     });
 

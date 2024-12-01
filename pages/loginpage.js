@@ -12,14 +12,14 @@ export default class LoginPage {
 
     async loginPage(){
         await this.actions.navigate('https://staging.analystbuilder.com')
-        // await this.actions.click(this.locators.LOGIN_PAGE_LINK)
+        await this.actions.click(this.locators.LOGIN_PAGE_LINK)
 
     }
 
-    async login(username, password){
-        await this.actions.fill(this.locators.ENTER_USERNAME, username)
+    async Enter_Credentials_and_Click_Login_BTn(email, password){
+        await this.actions.fill(this.locators.ENTER_EMAIL, email)
         await this.actions.fill(this.locators.ENTER_PASSWORD, password)
-        await this.actions.click(this.locators.CLICK_LOGINBUTTON)
+        await this.actions.click(this.locators.CLICK_LOGIN_BTN)
     }
 
     async getErrorMessage(xpath){
