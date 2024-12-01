@@ -35,8 +35,7 @@ export default defineConfig({
   // }], 
   ["list"],
   ["dot"],
-  ["allure-playwright"],
-  ["json", {outputFile: 'reporter.json'}]
+  ["experimental-allure-playwright"],
 ],
 
   
@@ -48,8 +47,8 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     headless: true,
-    screenshot: 'off',
-    video: 'off',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
     
     httpCredentials:{
       username:'te3ter',

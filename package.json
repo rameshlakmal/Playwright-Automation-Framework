@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open ./allure-report",
+    "allure:serve": "npx allure serve",
+    "test": "npx playwright test",
+    "posttest": "npm run allure:generate"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,6 +18,8 @@
     "@types/node": "^22.9.1",
     "allure-commandline": "^2.32.0",
     "allure-playwright": "3.0.6",
-    "ortoni-report": "^2.0.8"
+    "experimental-allure-playwright": "^0.0.3",
+    "ortoni-report": "^2.0.8",
+    "playwright": "^1.49.0"
   }
 }
