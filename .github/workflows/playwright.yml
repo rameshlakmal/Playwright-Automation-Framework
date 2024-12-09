@@ -22,11 +22,13 @@ jobs:
     - run: npm ci
     - run: npx playwright install
     - run: npx playwright test
-  
-    - uses: actions/upload-artifact@master
+
+    - name: Upload Playwright Artifacts
+      uses: actions/upload-artifact@master
       with:
         name: allure-results
         path: allure-results
+
         
     - name: Get Allure history
       uses: actions/checkout@v4
@@ -36,7 +38,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     
-    - name: Test marketplace action
+    - name: Generate Allure Report
       uses: simple-elf/allure-report-action@master
       if: always()
       id: allure-report
