@@ -1,22 +1,6 @@
 import { assert } from "console";
 import {test,expect} from "../fixtures/fixtures.js"
 
-const loginData = [
-    {
-        email: "lakmal@mailinator.com",
-        password: "123456"
-    },
-
-    {
-        email: "lakmali@mailinator.com",
-        password: "123456"
-    },
-
-    {
-        email: "",
-        password: ""
-    },
-]
 
 
 
@@ -27,15 +11,39 @@ test.describe('Login form test cases' , () => {
         await loginPage.loginPage();
     })
 
-
-    loginData.forEach((data,index) => {
-        test(`Login Test ${index + 1} - Login with email: ${data.email}`, async ({loginPage}) => {
-            await loginPage.Enter_Credentials_and_Click_Login_BTn(data.email,data.password);
-            await loginPage.assertErrorMessage("//span[normalize-space()='Email is required!']", "Password is req")
+        test('Test 1', async ({commonActions,page}) => {
+                
+            await commonActions.click('//a[normalize-space()="Explore Courses"]')
+            await expect(page).toHaveURL("https://staging.analystbuilder.com/courses");           
         });
-    });
 
-    test.afterEach(async ({page}) => {
-        await page.close()
-    });
+        test('Test 2', async ({commonActions,page}) => {
+                
+            await commonActions.click("//a[@class='text-app-disabled-text relative cursor-pointer text-lg hover:text-white focus:text-white'][normalize-space()='Questions']")
+            await expect(page).toHaveURL("https://staging.analystbuilder.com/question");           
+        });
+
+
+        // test('Test 2', async ({commonActions,page}) => {
+            
+        //     await commonActions.click('')
+
+        //     await expect(page).toHaveURL("https://staging.analystbuilder.com/courses");            
+        // });
+
+
+
+        // test('Test 3', async ({page}) => {
+            
+        //     await page.getByRole('link', { name: 'Pricing' }).click();
+
+        //     await expect(page).toHaveURL("https://staging.analystbuilder.com/pricing");                   
+        // });
+   
+
+    // test.afterEach(async ({commonActions}) => {
+    //     await commonActions.navigate('https://staging.analystbuilder.com/')
+    //     await expect(page.locator('xpath = //*[@id="__next"]/main/div/div[2]/header/div[2]/div[3]/div[1]/a')).toBeVisible();    
+
+    // });
 })

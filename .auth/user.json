@@ -1,0 +1,29 @@
+{
+  "cookies": [
+    {
+      "name": "ab_device_id",
+      "value": "12prsFUqvJHFHdUBo4R5g",
+      "domain": "staging.analystbuilder.com",
+      "path": "/",
+      "expires": 1765282742,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://staging.analystbuilder.com",
+      "localStorage": [
+        {
+          "name": "sb-nsjrrdvthnqqvzabbhwn-auth-token",
+          "value": "{\"access_token\":\"eyJhbGciOiJIUzI1NiIsImtpZCI6IjFLRHdINFBTbTVSVWF0NVgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL25zanJyZHZ0aG5xcXZ6YWJiaHduLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIzOGUyYTRiNC1mYjVmLTQ1ZWEtODQ1Yy1lOTNiYWZiY2E3MzgiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzMzNzUwMzQ0LCJpYXQiOjE3MzM3NDY3NDQsImVtYWlsIjoibGFrbWFsQG1haWxpbmF0b3IuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6eyJlbWFpbCI6Imxha21hbEBtYWlsaW5hdG9yLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZnVsbF9uYW1lIjoibGFrbWFsIiwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiIzOGUyYTRiNC1mYjVmLTQ1ZWEtODQ1Yy1lOTNiYWZiY2E3MzgifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTczMzc0Njc0NH1dLCJzZXNzaW9uX2lkIjoiZGFiZjlkY2EtOTM1ZS00NTExLTg2YjAtNjllZjgxMWRlYmI1IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.OSfJqh3i9pX92LQjLSSwxhuDq2hBEz3kMW7Ibacaqzg\",\"token_type\":\"bearer\",\"expires_in\":3600,\"expires_at\":1733750344,\"refresh_token\":\"I5lyM0AxYeZejmD5kcUMog\",\"user\":{\"id\":\"38e2a4b4-fb5f-45ea-845c-e93bafbca738\",\"aud\":\"authenticated\",\"role\":\"authenticated\",\"email\":\"lakmal@mailinator.com\",\"email_confirmed_at\":\"2024-12-09T07:43:45.429533Z\",\"phone\":\"\",\"confirmation_sent_at\":\"2024-12-09T07:43:15.609368Z\",\"confirmed_at\":\"2024-12-09T07:43:45.429533Z\",\"last_sign_in_at\":\"2024-12-09T12:19:04.888015242Z\",\"app_metadata\":{\"provider\":\"email\",\"providers\":[\"email\"]},\"user_metadata\":{\"email\":\"lakmal@mailinator.com\",\"email_verified\":false,\"full_name\":\"lakmal\",\"phone_verified\":false,\"sub\":\"38e2a4b4-fb5f-45ea-845c-e93bafbca738\"},\"identities\":[{\"identity_id\":\"96606f7c-f6d0-4725-bf5c-06ae0a783beb\",\"id\":\"38e2a4b4-fb5f-45ea-845c-e93bafbca738\",\"user_id\":\"38e2a4b4-fb5f-45ea-845c-e93bafbca738\",\"identity_data\":{\"email\":\"lakmal@mailinator.com\",\"email_verified\":false,\"full_name\":\"lakmal\",\"phone_verified\":false,\"sub\":\"38e2a4b4-fb5f-45ea-845c-e93bafbca738\"},\"provider\":\"email\",\"last_sign_in_at\":\"2024-12-09T07:43:15.603391Z\",\"created_at\":\"2024-12-09T07:43:15.60346Z\",\"updated_at\":\"2024-12-09T07:43:15.60346Z\",\"email\":\"lakmal@mailinator.com\"}],\"created_at\":\"2024-12-09T07:43:15.592889Z\",\"updated_at\":\"2024-12-09T12:19:04.8912Z\",\"is_anonymous\":false}}"
+        },
+        {
+          "name": "gbFeaturesCache",
+          "value": "[[\"https://cdn.growthbook.io||sdk-yqU3eVTNrCDjKa2\",{\"data\":{\"status\":200,\"features\":{\"r-enabled\":{\"defaultValue\":true},\"ai-enabled\":{\"defaultValue\":true},\"skip-date-parse-enabled\":{\"defaultValue\":true},\"new-sql-parser\":{\"defaultValue\":true},\"year-end-recap\":{\"defaultValue\":true}},\"experiments\":[],\"dateUpdated\":\"2024-12-05T08:56:10.586Z\"},\"version\":\"2024-12-05T08:56:10.586Z\",\"staleAt\":\"2024-12-09T12:20:02.724Z\",\"sse\":true}]]"
+        }
+      ]
+    }
+  ]
+}

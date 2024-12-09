@@ -47,7 +47,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: true,
+    headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     
@@ -63,6 +63,12 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+
+    {
+      name: 'setup', testMatch: /.*\.setup\.js/,
+    },
+
+
     {
       name: 'chromium',
       use: {
@@ -72,7 +78,9 @@ export default defineConfig({
         launchOptions: {
           args: ['--start-maximized']
         },
+        storageState: './.auth/user.json'
       },
+      dependencies: ['setup']
     },
 
     // {

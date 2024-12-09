@@ -9,11 +9,9 @@ export default class LoginPage {
     }
     
 
-
     async loginPage(){
         await this.actions.navigate('https://staging.analystbuilder.com')
-        await this.actions.click(this.locators.LOGIN_PAGE_LINK)
-
+        // await this.actions.click(this.locators.LOGIN_PAGE_LINK)
     }
 
     async Enter_Credentials_and_Click_Login_BTn(email, password){
