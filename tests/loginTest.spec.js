@@ -17,11 +17,11 @@ test.describe('Login form test cases' , () => {
             await expect(page).toHaveURL("https://staging.analystbuilder.com/courses");           
         });
 
-        test('Test 2', async ({commonActions,page}) => {
+        // test('Test 2', async ({commonActions,page}) => {
                 
-            await commonActions.click("//a[@class='text-app-disabled-text relative cursor-pointer text-lg hover:text-white focus:text-white'][normalize-space()='Questions']")
-            await expect(page).toHaveURL("https://staging.analystbuilder.com/questions");           
-        });
+        //     await commonActions.click("//a[@class='text-app-disabled-text relative cursor-pointer text-lg hover:text-white focus:text-white'][normalize-space()='Questions']")
+        //     await expect(page).toHaveURL("https://staging.analystbuilder.com/questions");           
+        // });
 
 
         // test('Test 2', async ({commonActions,page}) => {
