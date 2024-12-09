@@ -32,7 +32,8 @@ jobs:
         path: test-results/
 
     - name: Link Playwright Traces And Videos To Allure Report
-      working-directory: allure-results
+      # working-directory: allure-results
+      working-directory: test-results/
       if: failure()
       run: echo ARTIFACT_URL=${{ steps.artifact-upload-step.outputs.artifact-url }} >> environment.properties
 
