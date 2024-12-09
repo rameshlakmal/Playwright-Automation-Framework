@@ -25,11 +25,11 @@ jobs:
 
     - name: Upload Playwright Artifacts
       if: failure()
-      uses: actions/upload-artifact@v4.3.1
+      uses: actions/upload-artifact@v4
       id: artifact-upload-step
       with:
         name: allure-results
-        path: allure-results/
+        path: test-results/
 
     - name: Link Playwright Traces And Videos To Allure Report
       working-directory: allure-results
