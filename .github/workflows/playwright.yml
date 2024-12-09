@@ -23,11 +23,20 @@ jobs:
     - run: npx playwright install
     - run: npx playwright test
 
+    # - name: Upload Playwright Artifacts
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: allure-results
+    #     path: allure-results
     - name: Upload Playwright Artifacts
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v3
       with:
-        name: allure-results
-        path: allure-results
+        name: playwright-artifacts
+        path: |
+          allure-results
+          playwright-report/screenshots
+          playwright-report/videos
+          playwright-report/traces
 
         
     - name: Get Allure history
