@@ -17,11 +17,10 @@ test.describe('Login form test cases' , () => {
             await expect(page).toHaveURL("https://staging.analystbuilder.com/courses");           
         });
 
-        // test('Test 2', async ({commonActions,page}) => {
-                
-        //     await commonActions.click("//a[@class='text-app-disabled-text relative cursor-pointer text-lg hover:text-white focus:text-white'][normalize-space()='Questions']")
-        //     await expect(page).toHaveURL("https://staging.analystbuilder.com/questions");           
-        // });
+        test('Test 2', async ({page,commonActions}) => {
+            await commonActions.click("//a[normalize-space()='Explore Questions']")
+            await expect(page).toHaveURL("https://staging.analystbuilder.com/questions");           
+        });
 
 
         // test('Test 2', async ({commonActions,page}) => {
@@ -41,9 +40,9 @@ test.describe('Login form test cases' , () => {
         // });
    
 
-    // test.afterEach(async ({commonActions}) => {
-    //     await commonActions.navigate('https://staging.analystbuilder.com/')
-    //     await expect(page.locator('xpath = //*[@id="__next"]/main/div/div[2]/header/div[2]/div[3]/div[1]/a')).toBeVisible();    
+    test.afterEach(async ({commonActions}) => {
+        await commonActions.navigate('https://staging.analystbuilder.com/')
+        // await expect(page.locator('xpath = //*[@id="__next"]/main/div/div[2]/header/div[2]/div[3]/div[1]/a')).toBeVisible();    
 
-    // });
+    });
 })
