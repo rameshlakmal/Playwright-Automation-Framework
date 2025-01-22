@@ -5,6 +5,7 @@ export class LocatorFile {
         ENTER_EMAIL : "//input[@placeholder='Enter your email address']",
         ENTER_PASSWORD: "//input[@placeholder='Enter your password']",
         CLICK_LOGIN_BTN: "//button[@type='submit']"
+        
     };
   }
 
