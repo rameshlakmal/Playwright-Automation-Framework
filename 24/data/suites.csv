@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","2388","Test 1","chromium","Mon Dec 09 12:49:14 GMT 2024","passed","Mon Dec 09 12:49:17 GMT 2024","Login form test cases","loginTest.spec.js","",""
-"","4837","authenticate by UI","setup","Mon Dec 09 12:49:08 GMT 2024","passed","Mon Dec 09 12:49:12 GMT 2024","","auth.setup.js","",""
