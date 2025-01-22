@@ -19,7 +19,7 @@ test.describe('Login form test cases' , () => {
 
         test('Test 2', async ({page,commonActions}) => {
             await commonActions.click("//a[normalize-space()='Explore Questions']")
-            await expect(page).toHaveURL("https://staging.analystbuilder.com/question");           
+            await expect(page).toHaveURL("https://staging.analystbuilder.com/questions");           
         });
 
 
