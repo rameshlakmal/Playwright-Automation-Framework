@@ -10,7 +10,7 @@ export default class LoginPage {
     
 
     async loginPage(){
-        await this.actions.navigate('https://staging.analystbuilder.com')
+        await this.actions.navigate('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
         // await this.actions.click(this.locators.LOGIN_PAGE_LINK)
     }
 
@@ -19,6 +19,8 @@ export default class LoginPage {
         await this.actions.fill(this.locators.ENTER_PASSWORD, password)
         await this.actions.click(this.locators.CLICK_LOGIN_BTN)
     }
+
+    
 
     async getErrorMessage(xpath){
         return await this.actions.getText(xpath)
