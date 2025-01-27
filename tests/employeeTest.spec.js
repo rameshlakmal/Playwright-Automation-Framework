@@ -16,7 +16,7 @@ test.describe('Employee test cases' , () => {
             await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList");      
             await employeePage.Navigate_to_emp_create()
             await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee");      
-
+            await employeePage.Create_emp('Lehan','Tharuka')
         });
 
 })

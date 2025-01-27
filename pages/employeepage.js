@@ -18,9 +18,19 @@ export default class EmployeePage {
         await this.actions.click(this.locators.CLICK_PMI_BTN)
     }
 
+
     async Navigate_to_emp_create(){
         await this.actions.click(this.locators.CLICK_NEW_BTN)
     }
+
+    async Create_emp(firstName,lastName,page){
+        await this.actions.fill(this.locators.FIRST_NAME,firstName)
+        await this.actions.fill(this.locators.LAST_NAME,lastName)
+        const empID = await page.locator(this.locators.EMP_ID).inputValue();
+        console.log('Text Field Value:', empID);
+        await this.actions.click(this.locators.CLICK_SAVE_BTN)
+    }
+
 
     
 

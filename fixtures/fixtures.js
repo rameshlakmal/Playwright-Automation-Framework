@@ -5,13 +5,15 @@ import EmployeePage from "../pages/employeepage";
 import { LocatorFile } from "../locators/locators";
 
 export const test = base.extend({
+
+    
     loginPage: async({page},use) => {
         const loginPage = new LoginPage(page);
         await use(loginPage);
     },
 
 
-    loginPage: async({page},use) => {
+    employeePage: async({page},use) => {
         const employeePage = new EmployeePage(page);
         await use(employeePage);
     },
