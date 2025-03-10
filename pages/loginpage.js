@@ -9,14 +9,11 @@ export default class LoginPage {
     }
     
 
-    async loginPage(){
-        await this.actions.navigate('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-        // await this.actions.click(this.locators.LOGIN_PAGE_LINK)
-    }
-
-    async Enter_Credentials_and_Click_Login_BTn(email, password){
-        await this.actions.fill(this.locators.ENTER_EMAIL, email)
-        await this.actions.fill(this.locators.ENTER_PASSWORD, password)
+    async LoginWithValidCredentials(email, password){
+        await this.actions.navigate('https://staging.analystbuilder.com/')
+        await this.actions.click(this.locators.LOGIN_PAGE_LINK)
+        await this.actions.fillInputByPlaceholder(this.locators.UN_PH, email)
+        await this.actions.fillInputByPlaceholder(this.locators.PW_PH, password)
         await this.actions.click(this.locators.CLICK_LOGIN_BTN)
     }
 

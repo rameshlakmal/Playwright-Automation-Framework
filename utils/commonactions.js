@@ -3,6 +3,7 @@ import { selectors } from "@playwright/test";
 export default class CommonAction{
     constructor(page){
         this.page = page;
+        
     }
 
     async navigate(url){
@@ -14,12 +15,31 @@ export default class CommonAction{
         await this.page.click(selector)
     }
 
-    async fill(selector, text){
-        await this.page.fill(selector, text)
+
+
+    // Fill input fields using placeholder as a locator
+    async fillInputByPlaceholder(placeholder, text){ 
+        await this.page.getByPlaceholder(placeholder).fill(text)
     }
 
-    async type(selector,text,delay){
-        await this.page.type(selector,text,delay)
+    // Click elements using role
+
+    async clickByRole(role, name) { 
+        await this.page.getByRole(role, { name }).click();
+    }
+
+    // async clickByRole(role, name, timeout = 5000) { 
+    //     try {
+    //         await this.page.getByRole(role, { name }).click({ timeout });
+    //     } catch (error) {
+    //         throw new Error(`Failed to click on element with role '${role}' and name '${name}': ${error.message}`);
+    //     }
+    // }
+    
+
+
+    async type(selector,text){
+        await this.page.type(selector,text)
     }
 
     async getText(selector){
