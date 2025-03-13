@@ -1,0 +1,17 @@
+{
+    "Profile":{
+        "name":"dilshi",
+        "NewBio":"Hi I am Ramesh",
+        "NewFirstName":"Ramesh",
+        "NewLastName":"Lakmal",
+        "NewLocation":"Colombo",
+        "UpdatedValue":"Hi I am Ramesh",
+        "ProfileURL":"https://staging.analystbuilder.com/settings/profile"
+    },
+
+    "Login":{
+        "URL":"https://staging.analystbuilder.com/",
+        "email":"dilshi@mailinator.com",
+        "password":"123456"
+    }
+}

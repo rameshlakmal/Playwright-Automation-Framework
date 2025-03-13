@@ -74,7 +74,8 @@ export default defineConfig({
   projects: [
 
     {
-      name: 'setup', testMatch: /.*\.setup\.js/,
+      name: 'setup',
+      testMatch: /.*\.setup\.js/,
     },
 
 
