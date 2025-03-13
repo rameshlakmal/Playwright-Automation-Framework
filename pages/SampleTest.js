@@ -20,7 +20,7 @@ export default class SampleTest {
 
     async NavigateToSettingsPage(){
         await this.actions.navigate(Login.URL)
-        await this.actions.clickByRole('button','dilshi')
+        await this.actions.clickByRole('button','Ramesh')
         await this.actions.clickByRole('link','Settings')
     }
 
