@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5","authenticate by UI","setup","Thu Mar 13 18:16:06 GMT 2025","failed","Thu Mar 13 18:16:06 GMT 2025","","auth.setup.js","",""
