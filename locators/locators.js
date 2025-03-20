@@ -9,7 +9,14 @@ export class LocatorFile {
         PW_PH : 'Enter your password',        
     };
   }
-
+  static get Navigationbarlocators() {
+    return {
+      Pricing: '//*[@id="__next"]/main/div/div[2]/header/div[2]/div[2]/a[4]',
+      platformMonthlySub: '//*[@id="headlessui-tabs-panel-:r15:"]/div/div[2]/div[2]/div/div/div[2]/a',
+      CardOption: '//*[@id="root"]/div/div[2]/div[2]/main/div/form/div[1]/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div[1]/div/div/div',
+      Subscribe: '//*[@id="root"]/div/div[2]/div[2]/main/div/form/div[1]/div/div/div[3]/div/div[3]/button/div[3]'
+    };
+  }
 
 }
 
