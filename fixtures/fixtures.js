@@ -1,6 +1,6 @@
 import {test as base} from "@playwright/test";
 import CommonAction from "../utils/commonactions";
-import SampleTest from "../pages/SampleTest";
+import LoginTest from "../pages/LoginTest";
 import PricePage from "../pages/PricingPage";
 import PaymentMethods from "../pages/PaymentMethods";
 import PurchesesPage from "../pages/PurchesesPage";
@@ -9,9 +9,9 @@ import { LocatorFile } from "../locators/locators";
 export const test = base.extend({
 
     
-    sampleTest: async({page},use) => {
-        const sampleTest = new SampleTest(page);
-        await use(sampleTest);
+    loginTest: async({page},use) => {
+        const loginTest = new LoginTest(page);
+        await use(loginTest);
     },
 
     pricePage: async({page},use) => {
