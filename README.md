@@ -47,11 +47,7 @@ The framework is integrated with **GitHub Actions** to:
 - Generate Allure reports post-test execution.  
 - Deploy reports to **GitHub Pages** for stakeholder visibility.  
 
-## Allure Report Access  
-The Allure reports are published at: [View Allure Report](<insert GitHub Pages URL>).  
 
-## Contributing  
-Contributions are welcome! Feel free to open issues or submit pull requests to improve this framework.  
 
 ## License  
 This project is licensed under the [MIT License](LICENSE).  
