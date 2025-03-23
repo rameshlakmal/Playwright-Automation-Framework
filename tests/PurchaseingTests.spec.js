@@ -8,6 +8,8 @@ test.describe("Purchaseing Test Cases", () => {
     Purchesespage,
   }) => {
     await pricePage.NavigateToPricingpage();
+
+    // Verify the pricing page
     await expect(page).toHaveURL("https://staging.analystbuilder.com/pricing");
     await pricePage.SubToPlatformMonthlySub();
     await Paymentmethods.Cardpayment();
