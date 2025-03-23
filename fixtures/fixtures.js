@@ -5,6 +5,7 @@ import PricePage from "../pages/PricingPage";
 import PaymentMethods from "../pages/PaymentMethods";
 import PurchesesPage from "../pages/PurchesesPage";
 import { LocatorFile } from "../locators/locators";
+import LocatorManager from "../locators/LocatorManager";
 
 export const test = base.extend({
   loginTest: async ({ page }, use) => {
@@ -39,6 +40,11 @@ export const test = base.extend({
       StripePortalLocators,
     };
     await use(locators);
+  },
+
+  locatorManager: async ({ page }, use) => {
+    const locatorManager = new LocatorManager(page);
+    await use(locatorManager);
   },
 });
 

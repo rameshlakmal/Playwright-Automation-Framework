@@ -1,10 +1,9 @@
-import { defineConfig, devices } from '@playwright/test';
-import dotenv from 'dotenv';
-
+import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
 
 dotenv.config({
   path: `./env/.env.${process.env.ENV}`,
-})
+});
 
 /**
  * Read environment variables from file.
@@ -12,22 +11,13 @@ dotenv.config({
  */
 // require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
-
-
-
-
-
-
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-
   timeout: 100_000,
 
-
-
-  testDir: './tests',
+  testDir: "./tests",
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -38,64 +28,54 @@ export default defineConfig({
   workers: process.env.CI ? 1 : 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
-  
-  
   reporter: [
-  //   ["ortoni-report",
-  // {
-  //   projectName: "AB Demo Test Project",
-  //   authorName: "Ramesh",
-  //   testType: '',
-  // }], 
-  ["list"],
-  ["dot"],
-  ["experimental-allure-playwright"],
-],
+    //   ["ortoni-report",
+    // {
+    //   projectName: "AB Demo Test Project",
+    //   authorName: "Ramesh",
+    //   testType: '',
+    // }],
+    ["list"],
+    ["dot"],
+    ["experimental-allure-playwright"],
+  ],
 
-  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
-    
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    headless: true,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    
-    httpCredentials:{
-      username:'te3ter',
-      password:'22JJ33kk'
+    trace: "on-first-retry",
+    headless: false,
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
+
+    httpCredentials: {
+      username: "te3ter",
+      password: "22JJ33kk",
     },
-    
-
   },
-
-
 
   /* Configure projects for major browsers */
   projects: [
-
     {
-      name: 'setup',
+      name: "setup",
       testMatch: /.*\.setup\.js/,
     },
 
-
     {
-      name: 'chromium',
+      name: "chromium",
       use: {
-        ...devices['Desktop Chrome'],
+        ...devices["Desktop Chrome"],
         deviceScaleFactor: undefined,
         viewport: null,
         launchOptions: {
-          args: ['--start-maximized']
+          args: ["--start-maximized"],
         },
-        storageState: './.auth/user.json'
+        storageState: "./.auth/user.json",
       },
-      dependencies: ['setup']
+      dependencies: ["setup"],
     },
 
     // {
@@ -136,4 +116,3 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-

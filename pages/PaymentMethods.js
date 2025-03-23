@@ -1,10 +1,10 @@
-import { LocatorFile } from "../locators/locators";
+import { LocatorManager } from "../locators/LocatorManager.js";
 import { CardDetails } from "../test-data/staging-env/test-data.json";
 
 export default class PaymentMethods {
   constructor(page) {
     this.page = page; // Use Playwright's page object directly
-    this.locators = LocatorFile.Navigationbarlocators;
+    this.locators = LocatorManager.StripePortalLocators;
   }
 
   async Cardpayment() {

@@ -1,10 +1,10 @@
-import { LocatorFile } from "../locators/locators";
+import { LocatorManager } from "../locators/LocatorManager.js";
 import { Common } from "../test-data/staging-env/test-data.json";
 
 export default class LoginTest {
   constructor(page) {
     this.page = page; // Use Playwright's page object directly
-    this.locators = LocatorFile.LoginPageLocators;
+    this.locators = LocatorManager.LoginPageLocators;
   }
 
   async LoginWithValidCredentials(email, password) {
