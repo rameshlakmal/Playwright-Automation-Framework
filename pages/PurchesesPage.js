@@ -1,13 +1,15 @@
-import { Common } from "../test-data/staging-env/test-data.json";
-
 export default class PurchesesPage {
   constructor(page) {
     this.page = page; // Use Playwright's page object directly
   }
 
   async NavigateToPurchsesPage() {
-    await this.page.goto(Common.URL);
-    await this.page.getByRole("button", { name: "dilshi" }).click();
+    await this.page.goto("/");
+    await this.page
+      .locator(
+        "xpath=/html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/header[1]/div[2]/div[3]/div[2]/button[1]/div[1]"
+      )
+      .click();
     await this.page.getByRole("link", { name: "Purchases" }).click();
   }
 }
