@@ -4,8 +4,7 @@ import LoginTest from "../pages/LoginTest";
 import PricePage from "../pages/PricingPage";
 import PaymentMethods from "../pages/PaymentMethods";
 import PurchesesPage from "../pages/PurchesesPage";
-import { LocatorFile } from "../locators/locators";
-import LocatorManager from "../locators/LocatorManager";
+import RegistrationPage from "../pages/RegistrationPage";
 
 export const test = base.extend({
   loginTest: async ({ page }, use) => {
@@ -28,23 +27,14 @@ export const test = base.extend({
     await use(Purchesespage);
   },
 
+  Registrationpage: async ({ page }, use) => {
+    const Registrationpage = new RegistrationPage(page);
+    await use(Registrationpage);
+  },
+
   commonActions: async ({ page }, use) => {
     const commonActions = new CommonAction(page);
     await use(commonActions);
-  },
-
-  locators: async ({}, use) => {
-    const locators = {
-      ...LocatorFile.LoginPageLocators,
-      Navigationbarlocators,
-      StripePortalLocators,
-    };
-    await use(locators);
-  },
-
-  locatorManager: async ({ page }, use) => {
-    const locatorManager = new LocatorManager(page);
-    await use(locatorManager);
   },
 });
 

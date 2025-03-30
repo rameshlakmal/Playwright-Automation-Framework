@@ -8,7 +8,7 @@ export default class LoginTest {
   }
 
   async LoginWithValidCredentials(email, password) {
-    await this.page.goto(Common.URL);
+    await this.page.goto("/");
     await this.page.getByRole("link", { name: "Login" }).click();
     await this.page.getByPlaceholder(this.locators.UN_PH).fill(email);
     await this.page.getByPlaceholder(this.locators.PW_PH).fill(password);

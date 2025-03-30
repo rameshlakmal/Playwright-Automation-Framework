@@ -1,6 +1,5 @@
 import CommonAction from "../utils/commonactions";
 import { LocatorManager } from "../locators/LocatorManager.js";
-import { Common } from "../test-data/staging-env/test-data.json";
 
 export default class PricePage {
   constructor(page) {
@@ -10,7 +9,7 @@ export default class PricePage {
   }
 
   async NavigateToPricingpage() {
-    await this.page.goto(Common.URL);
+    await this.page.goto("/");
     await this.page.click(this.locators.Pricing);
   }
 
