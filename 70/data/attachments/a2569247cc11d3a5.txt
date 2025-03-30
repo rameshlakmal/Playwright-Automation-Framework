@@ -1,0 +1,1 @@
+Confirmation link: https://staging.analystbuilder.com/auth/confirm-signup?confirmation_url=https%3a%2f%2fnsjrrdvthnqqvzabbhwn.supabase.co%2fauth%2fv1%2fverify%3ftoken%3d4283263a10641f13042f8e5c5d2ef3617e8420b025a0161f77d1d86c%26type%3dsignup%26redirect_to%3dhttps%3a%2f%2fstaging.analystbuilder.com%2flogin
