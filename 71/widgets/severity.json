@@ -1,0 +1,1 @@
+[{"uid":"d6ac5fcfb11aa51e","name":"New User Register and Login","time":{"start":1743349411058,"stop":1743349426138,"duration":15080},"status":"passed","severity":"normal"},{"uid":"f2aaa66a228b0d","name":"Subscribe to a Platform Monthly Sub","time":{"start":1743349528246,"stop":1743349629455,"duration":101209},"status":"broken","severity":"normal"}]
