@@ -10,7 +10,11 @@ export default class PricePage {
 
   async NavigateToPricingpage() {
     await this.page.goto("/");
-    await this.page.click(this.locators.Pricing);
+    // await this.page.click(this.locators.Pricing);
+    await this.page
+      .locator("header")
+      .getByRole("link", { name: "Pricing" })
+      .click();
   }
 
   async SubToPlatformMonthlySub() {

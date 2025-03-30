@@ -69,7 +69,7 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         deviceScaleFactor: undefined,
-        viewport: null,
+        viewport: { width: 1920, height: 1080 },
         launchOptions: {
           args: ["--start-maximized"],
         },

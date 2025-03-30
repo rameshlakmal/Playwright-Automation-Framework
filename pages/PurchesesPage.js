@@ -7,7 +7,7 @@ export default class PurchesesPage {
     await this.page.goto("/");
     await this.page
       .locator(
-        "xpath=(//div[@class='flex size-9 cursor-pointer flex-row items-center justify-end gap-2 md:size-full'])[2]"
+        "xpath=/html[1]/body[1]/div[1]/main[1]/div[1]/div[2]/header[1]/div[2]/div[3]/div[2]/button[1]/div[1]"
       )
       .click();
     await this.page.getByRole("link", { name: "Purchases" }).click();
