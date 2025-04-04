@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","31140","Test 1","chromium","Thu Mar 13 12:28:10 GMT 2025","broken","Thu Mar 13 12:28:42 GMT 2025","Sample Test Cases","SampleTest.spec.js","",""
-"","3889","authenticate by UI","setup","Thu Mar 13 12:27:35 GMT 2025","passed","Thu Mar 13 12:27:38 GMT 2025","","auth.setup.js","",""
