@@ -1,32 +1,6 @@
 {
-  "Profile": {
-    "name": "Ramesh",
-    "NewBio": "Hi I am Ramesh",
-    "NewFirstName": "Ramesh",
-    "NewLastName": "Lakmal",
-    "NewLocation": "Colombo",
-    "UpdatedValue": "Hi I am Ramesh",
-    "ProfileURL": "https://staging.analystbuilder.com/settings/profile"
-  },
-
   "Login": {
-    "URL": "https://staging.analystbuilder.com/",
-    "email": "dilshi@mailinator.com",
-    "password": "123456"
-  },
-
-  "Common": {
-    "URL": "https://staging.analystbuilder.com/"
-  },
-
-  "CardDetails": {
-    "CardNumber": "4242424242424242",
-    "ExpDate": "1227",
-    "CVC": "123",
-    "CardHolderName": "Dilshi",
-    "AddressLine1": "No 10",
-    "AddressLine2": "Colombo",
-    "City": "Colombo",
-    "PostalCode": "10250"
+    "username": "Admin",
+    "password": "admin123"
   }
 }

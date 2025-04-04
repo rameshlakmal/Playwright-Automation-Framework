@@ -37,24 +37,23 @@ export default defineConfig({
     // }],
     ["list"],
     ["dot"],
-    ["experimental-allure-playwright"],
+    ["allure-playwright"],
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    launchOptions: {
+      args: ["--start-maximized"],
+    },
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "https://staging.analystbuilder.com",
+    baseURL:
+      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
-    headless: true,
+    headless: false,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
-
-    httpCredentials: {
-      username: "te3ter",
-      password: "22JJ33kk",
-    },
   },
 
   /* Configure projects for major browsers */
@@ -65,18 +64,28 @@ export default defineConfig({
     },
 
     {
-      name: "chromium",
+      name: "Google Chrome",
       use: {
-        ...devices["Desktop Chrome"],
-        deviceScaleFactor: undefined,
-        viewport: { width: 1920, height: 1080 },
-        launchOptions: {
-          args: ["--start-maximized"],
-        },
+        viewport: null,
+        channel: "chrome",
         storageState: "./.auth/user.json",
       },
       dependencies: ["setup"],
     },
+
+    // {
+    //   name: "chromium",
+    //   use: {
+    //     ...devices["Desktop Chrome"],
+    //     deviceScaleFactor: undefined,
+    //     viewport: { width: 1920, height: 1080 },
+    //     launchOptions: {
+    //       args: ["--start-maximized"],
+    //     },
+    //     storageState: "./.auth/user.json",
+    //   },
+    //   dependencies: ["setup"],
+    // },
 
     // {
     //   name: 'firefox',
@@ -102,10 +111,6 @@ export default defineConfig({
     // {
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
 
