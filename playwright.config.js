@@ -46,12 +46,11 @@ export default defineConfig({
       args: ["--start-maximized"],
     },
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL:
-      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    baseURL: "https://opensource-demo.orangehrmlive.com/web/index.php",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
-    headless: true,
+    headless: false,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
     trace: "retain-on-failure",
