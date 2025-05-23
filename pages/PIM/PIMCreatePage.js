@@ -1,17 +1,32 @@
+import { LocatorManager } from '../../locators/LocatorManager.js'; // Adjusted path
+
 export default class PIMCreatePage {
   constructor(page) {
-    this.page = page; // Use Playwright's page object directly
-    // this.locatorManager = new LocatorManager(page); // Initialize LocatorManager with the page object
+    this.page = page;
+    this.locators = LocatorManager.PIMLocators;
   }
 
   async FillCreateEmployeeForm({ firstname, middlename, lastname, empId }) {
-    await this.page.getByPlaceholder("First Name").fill(firstname);
-    await this.page.getByPlaceholder("Middle Name").fill(middlename);
-    await this.page.getByPlaceholder("Last Name").fill(lastname);
-    await this.page.locator("form").getByRole("textbox").nth(4).fill(empId);
+    await this.page.locator(this.locators.firstNameInput).fill(firstname);
+    await this.page.locator(this.locators.middleNameInput).fill(middlename);
+    await this.page.locator(this.locators.lastNameInput).fill(lastname);
+    await this.page.locator(this.locators.employeeIdInput).fill(empId);
   }
 
   async SubmitCreateEmployeeForm() {
-    await this.page.getByRole("button", { name: "Save" }).click();
+    await this.page.locator(this.locators.saveButton).click();
+  }
+
+  // Getter methods for input field locators
+  getFirstNameInputLocator() {
+    return this.page.locator(this.locators.firstNameInput);
+  }
+
+  getMiddleNameInputLocator() {
+    return this.page.locator(this.locators.middleNameInput);
+  }
+
+  getLastNameInputLocator() {
+    return this.page.locator(this.locators.lastNameInput);
   }
 }
