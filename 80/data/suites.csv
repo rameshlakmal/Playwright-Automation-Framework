@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","0","Create Employee","webkit","Fri May 23 19:11:46 GMT 2025","skipped","Fri May 23 19:11:46 GMT 2025","Employee Create,Update and Delete Test Cases","EmployeeTests.spec.js","",""
+"","0","Create Employee","firefox","Fri May 23 19:11:46 GMT 2025","skipped","Fri May 23 19:11:46 GMT 2025","Employee Create,Update and Delete Test Cases","EmployeeTests.spec.js","",""
+"","0","Create Employee","Google Chrome","Fri May 23 19:11:46 GMT 2025","skipped","Fri May 23 19:11:46 GMT 2025","Employee Create,Update and Delete Test Cases","EmployeeTests.spec.js","",""
+"","232","User login","setup","Fri May 23 19:11:46 GMT 2025","failed","Fri May 23 19:11:46 GMT 2025","","auth.setup.js","",""
