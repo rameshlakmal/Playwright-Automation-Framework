@@ -1,3 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","103734","Subscribe to a Platform Monthly Sub","chromium","Sat Mar 22 11:57:23 GMT 2025","broken","Sat Mar 22 11:59:07 GMT 2025","Purchaseing Test Cases","PurchaseingTests.spec.js","",""
-"","7683","authenticate by UI","setup","Sat Mar 22 11:55:28 GMT 2025","passed","Sat Mar 22 11:55:36 GMT 2025","","auth.setup.js","",""
