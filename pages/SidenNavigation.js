@@ -6,6 +6,8 @@ export default class Navigation {
   }
 
   async NavigateToPIM() {
+    await this.page.pause();
+
     await this.page.goto(
       "https://opensource-demo.orangehrmlive.com/web/dashboard/index"
     );
