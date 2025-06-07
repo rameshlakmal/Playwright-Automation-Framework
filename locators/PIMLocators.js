@@ -1,4 +1,5 @@
 export const PIMLocators = {
+
   // Locators for PIMCreatePage
   firstNameInput: '[placeholder="First Name"]',
   middleNameInput: '[placeholder="Middle Name"]',

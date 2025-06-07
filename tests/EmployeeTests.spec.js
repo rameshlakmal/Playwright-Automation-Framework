@@ -2,6 +2,16 @@ import { test, expect } from "../fixtures/fixtures.js";
 import Logger from '../utils/Logger.js'; // Import the Logger
 
 test.describe("Employee Create,Update and Delete Test Cases", () => {
+  let EmployeeData;
+  test.beforeAll(async () => {
+    EmployeeData = {
+      firstname: faker.person.firstName(),
+      middlename: faker.person.middleName(),
+      lastname: faker.person.lastName(),
+      empId: faker.string.numeric(4),
+    };
+  });
+
   test("Create Employee", async ({
     navigation,
     PimIndexPage,
@@ -15,6 +25,7 @@ test.describe("Employee Create,Update and Delete Test Cases", () => {
 
     await navigation.navigateToPIM(); // Ensuring method name consistency from previous tasks
     await PimIndexPage.clickAddButton(); // Corrected method name
+
     await PimCreatePage.FillCreateEmployeeForm(EmployeeData);
     await PimCreatePage.SubmitCreateEmployeeForm();
 
@@ -28,5 +39,18 @@ test.describe("Employee Create,Update and Delete Test Cases", () => {
       EmployeeData.lastname
     );
     Logger.info("Test Create Employee completed successfully.");
+  });
+
+  test("Update Employee", async ({
+    navigation,
+    PimIndexPage,
+    PimUpdatePage,
+  }) => {
+    await navigation.NavigateToPIM();
+    // await PimIndexPage.SearchEmployeeByName(EmployeeData.firstname);
+    // await PimIndexPage.SelectEmployeeRowByName(EmployeeData.firstname);
+    await PimIndexPage.SearchEmployeeByName("Amelia");
+    await PimIndexPage.SelectEmployeeRowByName("Amelia");
+    await PimUpdatePage.UpdateEmployeeProfilePic();
   });
 });
