@@ -4,6 +4,7 @@ import LoginTest from "../pages/LoginPage";
 import Navigation from "../pages/SidenNavigation";
 import PIMIndexPage from "../pages/PIM/PIMIndexPage";
 import PIMCreatePage from "../pages/PIM/PIMCreatePage";
+import PIMUpdatePage from "../pages/PIM/PIMUpdatePage";
 
 export const test = base.extend({
   loginTest: async ({ page }, use) => {
@@ -24,6 +25,11 @@ export const test = base.extend({
   PimCreatePage: async ({ page }, use) => {
     const PimCreatePage = new PIMCreatePage(page);
     await use(PimCreatePage);
+  },
+
+  PimUpdatePage: async ({ page }, use) => {
+    const PimUpdatePage = new PIMUpdatePage(page);
+    await use(PimUpdatePage);
   },
 
   commonActions: async ({ page }, use) => {
