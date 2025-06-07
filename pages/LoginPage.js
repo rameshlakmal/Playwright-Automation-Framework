@@ -1,12 +1,24 @@
-export default class LoginTest {
+import { LocatorManager } from '../locators/LocatorManager.js';
+import Logger from '../utils/Logger.js'; // Import the Logger
+
+export default class LoginPage {
   constructor(page) {
-    this.page = page; // Use Playwright's page object directly
+    this.page = page;
+    this.locators = LocatorManager.LoginLocators;
   }
 
-  async LoginWithValidCredentials(username, password) {
-    await this.page.goto("auth/login");
-    await this.page.getByRole("textbox", { name: "Username" }).fill(username);
-    await this.page.getByRole("textbox", { name: "Password" }).fill(password);
-    await this.page.getByRole("button", { name: "Login" }).click();
+  async login(username, password) {
+    Logger.info(`Attempting to login user: ${username}`); // Log an info message
+    await this.page.goto("auth/login"); // Navigation can stay here, or be part of try-catch
+    try {
+      await this.page.locator(this.locators.usernameInput).fill(username);
+      await this.page.locator(this.locators.passwordInput).fill(password);
+      await this.page.locator(this.locators.loginButton).click();
+      Logger.info(`Login submitted for user: ${username}`);
+    } catch (error) {
+      Logger.error(`Error during login for user ${username}: ${error.message}`);
+      // It's important to re-throw the error so that the test calling this method knows it failed.
+      throw error; 
+    }
   }
 }

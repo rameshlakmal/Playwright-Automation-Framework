@@ -1,12 +1,15 @@
-import { LocatorManager } from "../../locators/LocatorManager.js";
+
+import { LocatorManager } from '../../locators/LocatorManager.js';
+
 export default class PIMIndexPage {
   constructor(page) {
-    this.page = page; // Use Playwright's page object directly
-    this.locator = LocatorManager.PIMLocators;
+    this.page = page;
+    this.locators = LocatorManager.PIMLocators; // PIMLocators now includes addButton
+
   }
 
-  async ClickAddButton() {
-    await this.page.getByRole("button", { name: " Add" }).click();
+  async clickAddButton() { // Renamed method
+    await this.page.locator(this.locators.addButton).click();
   }
 
   async SearchEmployeeByName(EmpName) {
