@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","11428","Test 1","chromium","Mon Jan 27 01:02:26 IST 2025","passed","Mon Jan 27 01:02:37 IST 2025","Login form test cases","loginTest.spec.js","",""
-"","9090","authenticate by UI","setup","Mon Jan 27 01:02:10 IST 2025","passed","Mon Jan 27 01:02:19 IST 2025","","auth.setup.js","",""
-"","16979","Test 2","chromium","Sat Jan 04 03:40:09 IST 2025","failed","Sat Jan 04 03:40:26 IST 2025","Login form test cases","loginTest.spec.js","",""

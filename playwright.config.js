@@ -2,7 +2,7 @@ import { defineConfig, devices } from "@playwright/test";
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: `./env/.env.${process.env.ENV}`,
+  path: `./config/.env.${process.env.ENV}`,
 });
 
 /**
@@ -19,42 +19,33 @@ export default defineConfig({
 
   testDir: "./tests",
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 1 : 1,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 1,
+  workers: process.env.CI ? '50%' : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
   reporter: [
-    //   ["ortoni-report",
-    // {
-    //   projectName: "AB Demo Test Project",
-    //   authorName: "Ramesh",
-    //   testType: '',
-    // }],
     ["list"],
     ["dot"],
-    ["experimental-allure-playwright"],
+    ["allure-playwright"],
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: "https://opensource-demo.orangehrmlive.com/web/index.php",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
-    headless: false,
+    headless: !!process.env.CI,
     screenshot: "only-on-failure",
     video: "retain-on-failure",
-
-    httpCredentials: {
-      username: "te3ter",
-      password: "22JJ33kk",
-    },
+    viewport: { width: 1920, height: 1080 }, // Added consistent viewport
+    // launchOptions for start-maximized removed
   },
 
   /* Configure projects for major browsers */
@@ -65,28 +56,46 @@ export default defineConfig({
     },
 
     {
-      name: "chromium",
+      name: "Google Chrome",
       use: {
-        ...devices["Desktop Chrome"],
-        deviceScaleFactor: undefined,
-        viewport: null,
-        launchOptions: {
-          args: ["--start-maximized"],
-        },
+        // viewport: null, // Removed to inherit global viewport
+        channel: "chrome",
         storageState: "./.auth/user.json",
       },
       dependencies: ["setup"],
     },
 
     // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
+    //   name: "chromium",
+    //   use: {
+    //     ...devices["Desktop Chrome"],
+    //     deviceScaleFactor: undefined,
+    //     viewport: { width: 1920, height: 1080 },
+    //     launchOptions: {
+    //       args: ["--start-maximized"],
+    //     },
+    //     storageState: "./.auth/user.json",
+    //   },
+    //   dependencies: ["setup"],
     // },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        storageState: './.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
+
+    {
+      name: 'webkit',
+      use: {
+        ...devices['Desktop Safari'],
+        storageState: './.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
 
     /* Test against mobile viewports. */
     // {
@@ -102,10 +111,6 @@ export default defineConfig({
     // {
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
 

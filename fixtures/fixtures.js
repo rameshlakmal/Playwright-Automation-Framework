@@ -1,11 +1,9 @@
 import { test as base } from "@playwright/test";
 import CommonAction from "../utils/commonactions";
-import LoginTest from "../pages/LoginTest";
-import PricePage from "../pages/PricingPage";
-import PaymentMethods from "../pages/PaymentMethods";
-import PurchesesPage from "../pages/PurchesesPage";
-import { LocatorFile } from "../locators/locators";
-import LocatorManager from "../locators/LocatorManager";
+import LoginTest from "../pages/LoginPage";
+import Navigation from "../pages/SidenNavigation";
+import PIMIndexPage from "../pages/PIM/PIMIndexPage";
+import PIMCreatePage from "../pages/PIM/PIMCreatePage";
 
 export const test = base.extend({
   loginTest: async ({ page }, use) => {
@@ -13,38 +11,24 @@ export const test = base.extend({
     await use(loginTest);
   },
 
-  pricePage: async ({ page }, use) => {
-    const pricePage = new PricePage(page);
-    await use(pricePage);
+  navigation: async ({ page }, use) => {
+    const navigation = new Navigation(page);
+    await use(navigation);
   },
 
-  Paymentmethods: async ({ page }, use) => {
-    const Paymentmethods = new PaymentMethods(page);
-    await use(Paymentmethods);
+  PimIndexPage: async ({ page }, use) => {
+    const PimIndexPage = new PIMIndexPage(page);
+    await use(PimIndexPage);
   },
 
-  Purchesespage: async ({ page }, use) => {
-    const Purchesespage = new PurchesesPage(page);
-    await use(Purchesespage);
+  PimCreatePage: async ({ page }, use) => {
+    const PimCreatePage = new PIMCreatePage(page);
+    await use(PimCreatePage);
   },
 
   commonActions: async ({ page }, use) => {
     const commonActions = new CommonAction(page);
     await use(commonActions);
-  },
-
-  locators: async ({}, use) => {
-    const locators = {
-      ...LocatorFile.LoginPageLocators,
-      Navigationbarlocators,
-      StripePortalLocators,
-    };
-    await use(locators);
-  },
-
-  locatorManager: async ({ page }, use) => {
-    const locatorManager = new LocatorManager(page);
-    await use(locatorManager);
   },
 });
 
