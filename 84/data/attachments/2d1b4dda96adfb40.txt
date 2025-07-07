@@ -1,0 +1,3 @@
+[2025-07-07T13:08:11.295Z] [INFO] Starting test: Create Employee
+[2025-07-07T13:08:11.295Z] [INFO] Generated employee data: {"firstname":"Hermina","middlename":"Ellis","lastname":"Wisoky-Veum","empId":"0325"}
+[2025-07-07T13:08:15.086Z] [INFO] Test Create Employee completed successfully.
