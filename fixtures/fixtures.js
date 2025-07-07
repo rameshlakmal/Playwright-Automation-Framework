@@ -1,7 +1,7 @@
 import { test as base } from "@playwright/test";
 import CommonAction from "../utils/commonactions";
 import LoginTest from "../pages/LoginPage";
-import Navigation from "../pages/SidenNavigation";
+import SideNavigationBar from "../pages/SidenNavigation";
 import PIMIndexPage from "../pages/PIM/PIMIndexPage";
 import PIMCreatePage from "../pages/PIM/PIMCreatePage";
 import PIMUpdatePage from "../pages/PIM/PIMUpdatePage";
@@ -13,7 +13,7 @@ export const test = base.extend({
   },
 
   navigation: async ({ page }, use) => {
-    const navigation = new Navigation(page);
+    const navigation = new SideNavigationBar(page);
     await use(navigation);
   },
 

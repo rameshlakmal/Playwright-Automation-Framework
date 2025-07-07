@@ -7,5 +7,4 @@ export const LocatorManager = {
   LoginLocators,
   SideNavigationLocators, // Added export
   // Add other page locators here
->>>>>>> main
 };

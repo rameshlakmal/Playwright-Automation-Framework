@@ -1,4 +1,4 @@
-import { LocatorManager } from '../../locators/LocatorManager.js'; // Adjusted path
+import { LocatorManager } from "../../locators/LocatorManager.js"; // Adjusted path
 
 export default class PIMCreatePage {
   constructor(page) {
